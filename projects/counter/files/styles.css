@@ -1,0 +1,29 @@
+.counter-shell {
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.counter-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.counter-button {
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 0.5rem 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.counter-button:hover {
+  background: #1d4ed8;
+}

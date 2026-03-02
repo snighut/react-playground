@@ -1,0 +1,35 @@
+.todo-shell {
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: Inter, system-ui, sans-serif;
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+.todo-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.todo-input-row input {
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 0.45rem 0.6rem;
+}
+
+.todo-input-row button {
+  border: none;
+  border-radius: 8px;
+  background: #7c3aed;
+  color: white;
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+.todo-list {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+}
