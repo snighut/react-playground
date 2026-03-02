@@ -11,18 +11,26 @@ export function Team(props: TeamProps) {
   const [description] = useState(props.description);
   const [name] = useState(props.name)
   const [players] = useState(props.players || [])
-  return (<div> 
-      Team Name: <span>{name}</span>
-      <div>
-        Team Description: <span>{description}</span>
-      </div>
-      {players.map(player => 
+  const [expanded, setExpanded] = useState(false);
+  const toggleExpanded = () => setExpanded(!expanded);
+
+  function renderPlayers(players: { name: string; age: number; }[]): React.ReactNode {
+    return players.map(player => 
         (
-          <Player name={player.name} 
-                  key={player.name}
-                  age={player.age} />
+          <>
+            <div>
+              Team Description: <span>{description}</span>
+            </div>
+            <Player name={player.name}
+              key={player.name}
+              age={player.age} />
+          </>
         ))
-      }
+  }
+
+  return (<div onClick={toggleExpanded}> 
+      Team Name: <span>{name}</span>
+      {expanded && renderPlayers(players)}
     </div>
   );
 }
